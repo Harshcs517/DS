@@ -17,14 +17,26 @@ public class Myset{
     }
     public void Insert(MobilePhone o){
         //insert o in the set.
-        head.add(o);
-        size=size+1;
+        if(!this.IsMember(o))
+        {
+            head.add(o);
+            size=size+1;
+        }
+        else{
+            System.out.println("ELement already exist");
+        }
     }
     public void Delete(MobilePhone o){
         //Deletes o from the set, throws exception if o is not in the set.
         try{
-            head.remove(o);
-            size=size-1;
+            if(this.IsMember(o))
+            {
+                head.remove(o);
+                size=size-1;
+            }
+            else{
+                System.out.println("Element does not exist");
+            }
         }
         catch(IndexOutOfBoundsException e)
         {
@@ -103,10 +115,10 @@ public class Myset{
         check.Insert(c);
         System.out.println(check.head);
         Myset pile = new Myset();
-        pile.Insert(d);
         System.out.println(pile.head);
         pile=check.Union(pile);
         System.out.println(pile.head);
-       
+        check.Delete(d);
+        check.Insert(a);
     }
 }

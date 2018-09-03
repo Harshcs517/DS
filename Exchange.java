@@ -26,16 +26,17 @@ public class Exchange {
 	public Boolean isRoot(){
 		return baseno==0;
 	}
-	public Exchange subtree(int i){
+	public Exchange subtree(int i){//not done something according 
 		return children.get(i);
 	}
 	MobilePhoneSet setOfPhones = new MobilePhoneSet();
 	public MobilePhoneSet residentSet(){
 		//his returns the resident set of mobile phones of the exchange.
+		Exchange a; 
 		try{
 			for(int i=0; i < children.size(); i++)
 			{
-				Exchange a = children.elementAt(i);
+				a = children.elementAt(i);
 				setOfPhones.phones = setOfPhones.phones.Union(a.setOfPhones.phones);
 			}
 		}
