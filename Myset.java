@@ -53,6 +53,7 @@ public class Myset{
             for(int j=0; j< this.head.size(); j++){
                 if(this.head.get(j)==a.head.get(i))
                 {
+                    check=0;
                     break;
                 }
                 check=check+1;
@@ -60,6 +61,7 @@ public class Myset{
             if(check==this.head.size())
             {
                 union.head.add(a.head.get(i));
+                check=0;
             }
         }
         return union;

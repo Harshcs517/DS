@@ -7,8 +7,9 @@ public class checker {
         RoutingMapTree r = new RoutingMapTree();
         
 			String actionString;
-            actionString = "addExchange 0 1";
+            actionString = "queryNthChild 989 0";
             r.performAction(actionString);
-        
+            
+
     }
 }

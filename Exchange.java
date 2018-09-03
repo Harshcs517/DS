@@ -32,13 +32,15 @@ public class Exchange {
 	MobilePhoneSet setOfPhones = new MobilePhoneSet();
 	public MobilePhoneSet residentSet(){
 		//his returns the resident set of mobile phones of the exchange.
-		Exchange a; 
+		// System.out.printf("%d",this.children.size()) ;
 		try{
-			for(int i=0; i < children.size(); i++)
+			for(int i=0; i < this.children.size(); i++)
 			{
-				a = children.elementAt(i);
-				setOfPhones.phones = setOfPhones.phones.Union(a.setOfPhones.phones);
+				// System.out.println(this.children.elementAt(i));
+				// children.elementAt(i).residentSet();
+				this.setOfPhones.phones = this.setOfPhones.phones.Union(this.children.elementAt(i).setOfPhones.phones);
 			}
+			// System.out.println(this.setOfPhones.phones.head);
 		}
 		catch(IndexOutOfBoundsException e){
 			
