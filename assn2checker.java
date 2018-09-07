@@ -11,7 +11,7 @@ public class assn2checker
 
 		try {
 			String actionString;
-			br = new BufferedReader(new FileReader("actions2.txt"));
+			br = new BufferedReader(new FileReader("actions3.txt"));
 
 			while ((actionString = br.readLine()) != null) {
 				r.performAction(actionString);

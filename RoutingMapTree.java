@@ -69,8 +69,8 @@ public class RoutingMapTree{
 				// System.out.println(parent.children);
 			} catch (NullPointerException e) {
 				System.out.printf("%s: ",actionMessage);
-				System.out.println("Error - No Exchange with identifier "+a+" found in the network");
-				return actionMessage+": Error - No Exchange with identifier "+a+" found in the network";
+				System.out.println("Error - No Exchange with identifier "+a);
+				return actionMessage+": Error - No Exchange with identifier "+a;
 			}		
 		}
 		else if(Objects.equals(split[0], "switchOnMobile")) 
@@ -89,8 +89,8 @@ public class RoutingMapTree{
 				}
 			} catch (NullPointerException e) {
 				System.out.printf("%s: ",actionMessage);
-				System.out.println("Error - No Exchange with identifier "+b+" found in the network");
-				return actionMessage+": Error - No Exchange with identifier "+b+" found in the network";
+				System.out.println("Error - No Exchange with identifier "+b);
+				return actionMessage+": Error - No Exchange with identifier "+b;
 			}
 			
 			
@@ -124,8 +124,8 @@ public class RoutingMapTree{
 				}
 			} catch (NullPointerException e) {
 				System.out.printf("%s: ",actionMessage);
-				System.out.println("Error - No Exchange with identifier "+b+" found in the network");
-				return actionMessage+": Error - No Exchange with identifier "+b+" found in the network";
+				System.out.println("Error - No Exchange with identifier "+b);
+				return actionMessage+": Error - No Exchange with identifier "+b;
 			}
 			for (int j = tree.ListOfExchange.size()-1; j >=0; j=j-1) {
 				tree.ListOfExchange.get(j).residentSet();
@@ -147,8 +147,8 @@ public class RoutingMapTree{
 			if(i==this.root.setOfPhones.phones.head.size())
 			{
 				System.out.printf("%s: ",actionMessage);
-				System.out.println("Error - No mobile phone with identifier "+a+" found in the network");
-				return actionMessage+": Error - No mobile phone with identifier "+a+" found in the network";
+				System.out.println("Error - No mobile phone with identifier "+a);
+				return actionMessage+": Error - No mobile phone with identifier "+a;
 			}
 			
 		}
@@ -161,11 +161,11 @@ public class RoutingMapTree{
 				System.out.println(this.tree.Find(a).children.get(b).root.baseno);
 				return actionMessage+": "+this.tree.Find(a).children.get(b).root.baseno;
 			} catch (NullPointerException e) {
-				System.out.println("Error - No Exchange with identifier "+a+" found in the network");
-				return actionMessage+": Error - No Exchange with identifier "+a+" found in the network";
+				System.out.println("Error - No Exchange with identifier "+a);
+				return actionMessage+": Error - No Exchange with identifier "+a;
 			} catch (IndexOutOfBoundsException e) {
-				System.out.println("Error - No Exchange which is "+b+"th child of Exchange "+a);
-				return actionMessage+": Error - No Exchange which is "+b+"th child of Exchange "+a;
+				System.out.println("Error - No "+b+" child of Exchange "+a);
+				return actionMessage+": Error - No "+b+" child of Exchange "+a;
 			}		
 
 		} 
@@ -199,8 +199,8 @@ public class RoutingMapTree{
 				return answer;	
 			} catch (NullPointerException e) {
 				System.out.printf("%s: ",actionMessage);
-				System.out.println("Error - No Exchange with identifier "+a+" found in the network");
-				return actionMessage+": Error - No Exchange with identifier "+a+" found in the network";
+				System.out.println("Error - No Exchange with identifier "+a);
+				return actionMessage+": Error - No Exchange with identifier "+a;
 			}
 			
 		}	
