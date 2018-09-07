@@ -5,6 +5,7 @@ all:
 	javac Exchange.java
 	javac ExchangeList.java
 	javac RoutingMapTree.java
+	javac LinkedListimpl.java
 	javac assn2checker.java
 	java assn2checker
 

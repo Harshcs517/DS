@@ -1,38 +1,34 @@
 import java.util.*;
-
 /**
  * Myset
  */
-public class Myset{
-    
-    LinkedList<MobilePhone> head = new LinkedList<MobilePhone>();
-    int size = 0;
+@SuppressWarnings("unchecked")
+public class Myset<E>{
+    LinkedListimpl<E> head = new LinkedListimpl<E>();
     public Boolean IsEmpty(){
         //returns true if set is empty
-        return size==0;
+        return head.size()==0;
     }
-    public Boolean IsMember(MobilePhone o){
+    public Boolean IsMember(E o){
         //returns true if o is in the set, false otherwise.
         return head.contains(o);
     }
-    public void Insert(MobilePhone o){
+    public void Insert(E o){
         //insert o in the set.
         if(!this.IsMember(o))
         {
             head.add(o);
-            size=size+1;
         }
         else{
             System.out.println("ELement already exist");
         }
     }
-    public void Delete(MobilePhone o){
+    public void Delete(E o){
         //Deletes o from the set, throws exception if o is not in the set.
         try{
             if(this.IsMember(o))
             {
                 head.remove(o);
-                size=size-1;
             }
             else{
                 System.out.println("Element does not exist");

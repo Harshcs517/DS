@@ -2,5 +2,5 @@
  * MobilePhoneSet
  */
 public class MobilePhoneSet {
-    Myset phones = new Myset();
+    Myset<MobilePhone> phones = new Myset<MobilePhone>();
 }
