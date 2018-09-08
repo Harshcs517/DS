@@ -55,15 +55,21 @@ public class RoutingMapTree{
 				// parent.children.add(node);
 				// tree.ListOfExchange.add(node);
 				Exchange exist = this.tree.Find(b);
+				Exchange parent = this.tree.Find(a);
 				if(exist!=null)
 				{
 					System.out.printf("%s: ",actionMessage);
 					System.out.println("Error - Exchange with identifier "+b+" already in the network");
 					return actionMessage+": Error - Exchange with identifier "+b+" already in the network";
 				}
+				if(parent.setOfPhones.phones.head.size()!=0 && parent.children.size()==0)
+				{
+					System.out.printf("%s: ",actionMessage);
+					System.out.println("Error - Exchange with identifier "+a+" is a lowest level base station");
+					return actionMessage+": Error - Exchange with identifier "+a+" is a lowest level base station";
+				}
 				RoutingMapTree subTree = new RoutingMapTree();
 				subTree.root = new Exchange(b);
-				Exchange parent = this.tree.Find(a);
 				parent.children.add(subTree);
 				tree.ListOfExchange.add(subTree.root);
 				// System.out.println(parent.children);
