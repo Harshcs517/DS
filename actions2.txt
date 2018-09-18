@@ -16,8 +16,8 @@ addExchange 2 7
 addExchange 2 8
 addExchange 3 9
 queryNthChild 2 0
-queryNthChild 3 0
-switchOnMobile 989 4
+queryNthChild 3 8
+switchOnMobile 989 81
 switchOnMobile 876 555
 switchOnMobile 564 0
 switchOnMobile 562 32
