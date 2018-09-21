@@ -124,16 +124,17 @@ public class RoutingMapTree {
 		return RastaBata;
 	}
 
-	public void movePhone(MobilePhone a, Exchange b) throws PhoneSwitchedOff, PhoneNotFound
+	public void movePhone(MobilePhone a, Exchange b)
 	{
-		if(a==null)
+		if(b.children.size!=0)
 		{
-			throw new PhoneNotFound("phone hai hi nahi");
+			// System.out.println("nullgone");
+			return;
 		}
 		else if(!a.status())
 		{
 			// System.out.println("statusgone");
-			throw new PhoneSwitchedOff("Phone Bandh hai");
+			return;
 		}
 		else 
 		{
@@ -492,22 +493,10 @@ public class RoutingMapTree {
 				System.out.println(": Error - No Exchange with identifier "+b);
 				return actionMessage+": Error - No Exchange with identifier "+b;
 			}
-			try {
-				// System.out.println("gone");
-				movePhone(giveMobile,baseStation);
-				// System.out.println("gone");
 
-			} catch (PhoneSwitchedOff e) {
-				System.out.printf("%s: ",actionMessage);
-				System.out.println("Error - Mobile phone with identifier "+a+" is currently switched off");
-				return actionMessage+": Error - Mobile phone with identifier "+a+" is currently switched off";
-			} catch (PhoneNotFound e)
-			{
-				System.out.printf("%s: ",actionMessage);
-				System.out.println("Error - No Mobile phone with identifier "+a);
-				return actionMessage+": Error - No Mobile phone with identifier "+a;
-			}
-		
+			movePhone(giveMobile,baseStation);
+			// System.out.println("gone");
+
 			for (int i = tree.ListOfExchange.size()-1; i >=0; i=i-1) {
 				tree.ListOfExchange.get(i).residentSet();
 				
