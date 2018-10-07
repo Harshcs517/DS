@@ -38,6 +38,27 @@ public class RoutingMapTree{
 	{
 		a.switchOff();
 	}
+	//////////////////////////////////////////////////////////////////
+	/* Assignment 2 Part */
+	public Exchange findPhone(MobilePhone m){
+
+	}
+
+	public Exchange lowestRouter(Exchange a, Exchange b){
+
+	}
+
+	public ExchangeList routeCall(MobilePhone a, MobilePhone b){
+		
+	}
+
+
+
+
+
+
+
+	/////////////////////////////////////////////////////////////////
 	public String performAction(String actionMessage) {
 		// System.out.printf("%s: ",actionMessage);
 		int a,b;
