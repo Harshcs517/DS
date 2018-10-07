@@ -321,7 +321,7 @@ public class RoutingMapTree {
 			
 		}	
 		/////////////////////////////////////////////////////
-		else if(Objects.equals(split[0], "findPhone") || Objects.equals(split[0], "queryFindPhone"))
+		else if(Objects.equals(split[0], "findPhone"))
 		{
 			a = Integer.parseInt(split[1]);
 			MobilePhone giveMobile=null;
@@ -353,7 +353,7 @@ public class RoutingMapTree {
 			{
 			}
 		}
-		else if(Objects.equals(split[0], "lowestRouter") || Objects.equals(split[0], "queryLowestRouter"))
+		else if(Objects.equals(split[0], "lowestRouter"))
 		{
 			a = Integer.parseInt(split[1]);
 			b = Integer.parseInt(split[2]);
@@ -393,7 +393,7 @@ public class RoutingMapTree {
 				System.out.println("peak is null");
 			}
 		}
-		else if(Objects.equals(split[0], "findCallPath") || Objects.equals(split[0], "queryFindCallPath"))
+		else if(Objects.equals(split[0], "findCallPath"))
 		{
 			a = Integer.parseInt(split[1]);
 			b = Integer.parseInt(split[2]);

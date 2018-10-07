@@ -1,37 +1,85 @@
-addExchange 0 1
 addExchange 0 2
 addExchange 0 3
-addExchange 1 4
-addExchange 5 6
-addExchange 1 5
-addExchange 3 1
 addExchange 0 1
 addExchange 2 8
 addExchange 2 6
 addExchange 3 7
-switchOnMobile 99 7
-switchOnMobile 196 6
-switchOnMobile 196 7
-switchOnMobile 701 8
-switchOnMobile 660 6
-switchOnMobile 196 6
-switchOnMobile 312 9
-switchOnMobile 312 4
-switchOnMobile 252 4
-switchOnMobile 216 5
-switchOffMobile 216
-switchOffMobile 216
-switchOffMobile 312
-switchOffMobile 345
-switchOffMobile 701
-queryNthChild 0 0
-queryNthChild 0 1
-queryNthChild 0 2
-queryNthChild 0 3
-queryNthChild 9 0
-queryNthChild 3 1
-queryNthChild 1 0
-queryNthChild 2 1
-queryMobilePhoneSet 0
-queryMobilePhoneSet 6
-queryMobilePhoneSet 8
+addExchange 1 4
+addExchange 1 5
+addExchange 8 9 
+addExchange 8 10
+addExchange 8 11
+addExchange 6 12
+addExchange 7 17
+addExchange 4 19
+addExchange 5 21
+addExchange 9 15
+addExchange 9 16
+addExchange 10 23
+addExchange 11 24
+addExchange 12 13
+addExchange 12 14
+addExchange 17 18
+addExchange 19 20
+addExchange 21 22
+switchOnMobile 111 15
+switchOnMobile 222 23
+switchOnMobile 333 14
+switchOffMobile 111
+switchOnMobile 555 20
+movePhone 111 15
+movePhone 333 15
+lowestRouter 15 22
+movePhone 222 2
+movePhone 121 15
+lowestRouter 15 34
+movePhone 222 444
+lowestRouter 15 14
+switchOnMobile 111 13
+switchOffMobile 222
+switchOnMobile 666 20
+movePhone 666 23
+lowestRouter 8 6
+findCallPath 111 222
+findCallPath 666 333
+findCallPath 665 555
+findCallPath 333 555
+findCallPath 555 111
+movePhone 333 445
+switchOnMobile 222 23
+findCallPath 222 333
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
